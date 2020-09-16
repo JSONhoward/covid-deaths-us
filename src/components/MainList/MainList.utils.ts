@@ -447,3 +447,8 @@ export const testData: TransformedData = {
         return arr
     }
 }
+
+export const CovidTestData: FetchCovidDataType = {
+    state: testData,
+    age: testData
+}
