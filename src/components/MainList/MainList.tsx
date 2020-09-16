@@ -3,15 +3,15 @@ import React from 'react'
 import { MainListContainer, LabelX, LabelY, LabelContainer } from './MainList.styled';
 import GraphBar from './GraphBar'
 import GraphOptions from './GraphOptions'
-import { CovidTestData } from './MainList.utils';
+// import { CovidTestData } from './MainList.utils';
 import { range } from '../../Utils/helpers';
-// import { FetchCovidData } from '../../Store/Selectors';
-// import { useRecoilValue } from 'recoil';
+import { FetchCovidData } from '../../Store/Selectors';
+import { useRecoilValue } from 'recoil';
 
 const MainList = () => {
     const [visible, setVisible] = React.useState<boolean>(false)
     const [options, setOption] = React.useState<string>('state')
-    // const covidData = useRecoilValue<FetchCovidDataType>(FetchCovidData)
+    const covidData = useRecoilValue<FetchCovidDataType>(FetchCovidData)
     const mainRef = React.useRef<HTMLDivElement>(null)
 
     React.useEffect(() => {
@@ -22,8 +22,8 @@ const MainList = () => {
         setOption((event.target as HTMLButtonElement).id)
     }
 
-    const bars = CovidTestData[options].cleanData.map((el: any, i: string | number | null | undefined) => {
-        const height = Math.floor(range(CovidTestData[options].min, CovidTestData[options].max, 50, mainRef.current?.clientHeight! - 100, el.covid_19_deaths))
+    const bars = covidData[options].cleanData.map((el: any, i: string | number | null | undefined) => {
+        const height = Math.floor(range(covidData[options].min, covidData[options].max, 50, mainRef.current?.clientHeight! - 100, el.covid_19_deaths))
 
         return (
             <React.Fragment key={'fragment' + i}>

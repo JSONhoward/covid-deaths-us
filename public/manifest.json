@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "U.S. Covid-19 Deaths",
+  "name": "U.S. Covid-19 Deaths by state/age",
   "icons": [
     {
       "src": "favicon.ico",
