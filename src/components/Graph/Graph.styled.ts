@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const MainListContainer = styled('div')`
+export const GraphContainer = styled('div')`
 position: relative;
 display: flex;
 height: 100%;
@@ -9,6 +9,7 @@ overflow-y: hidden;
 overflow-x: auto;
 box-shadow: inset 1px 1px 15px rgba(0,0,0,.5);
 background-color: white;
+z-index: 1;
 `
 
 export const LabelContainer = styled('div')`

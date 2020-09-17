@@ -10,13 +10,16 @@ const rotateSpinner = keyframes`
 `
 
 export const SpinnerContainer = styled('div')`
-position: absolute;
+position: relative;
 display: grid;
 place-items: center;
 height: 100%;
+min-height: calc(100vh - 8rem);
 width: 100%;
 
-svg {
+img {
+    height: 5rem;
+    width: auto;
     animation: 2s ${rotateSpinner} linear;
 }
 `

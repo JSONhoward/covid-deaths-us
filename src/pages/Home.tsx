@@ -3,13 +3,13 @@ import React from 'react'
 import Layout from '../components/Layout/Layout'
 import Spinner from '../components/Spinner'
 
-const MainList = React.lazy(() => import('../components/MainList'))
+const Graph = React.lazy(() => import('../components/Graph'))
 
 const Home = () => {
     return (
         <Layout>
             <React.Suspense fallback={<Spinner />}>
-                <MainList />
+                <Graph />
             </React.Suspense>
         </Layout>
     )

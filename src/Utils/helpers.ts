@@ -245,21 +245,6 @@ export const stateAbbr: StateAbbreviations = [
     }
 ]
 
-export const agesList = [
-    'All Ages',
-    'Under 1 year',
-    '1-4 year',
-    '5-14 years',
-    '15-24 years',
-    '25-34 years',
-    '35-44 years',
-    '45-54 years',
-    '55-64 years',
-    '65-74 years',
-    '75-84 years',
-    '85+ years'
-]
-
 export const transformData = (resData: InitialResponseType[]): TransformedData => {
     return {
         data: [...resData],
@@ -281,10 +266,19 @@ export const transformData = (resData: InitialResponseType[]): TransformedData =
                 const abbr = stateAbbr.filter(el2 => {
                     return el2.name === el.state
                 })[0]?.abbreviation
-                const obj = { ...el, 'covid_19_deaths': Number(el.covid_19_deaths), 'state': abbr || el.state, 'age_group_new': el.age_group_new.replace(/(under|and|over|years|year| )/ig, '') }
+                const obj = {
+                    ...el,
+                    'covid_19_deaths': Number(el.covid_19_deaths),
+                    'state': abbr || el.state,
+                    'age_group_new': el.age_group_new.replace(/(under|and|over|years|year| )/ig, ''),
+                }
                 return obj
             })
             return arr
+        },
+        get updated() {
+            let date = new Date(this.data[0]['data_as_of']).toLocaleDateString()
+            return date
         }
     }
 }

@@ -9,6 +9,7 @@ const redBarAnimation = keyframes`
 `
 
 export const GraphBarStyled = styled('div')<{state: string}>`
+position: relative;
 display: flex;
 flex-direction: column-reverse;
 align-items: flex-end;
@@ -34,6 +35,7 @@ transition: opacity ${fadeDuration}ms ease-in-out;
 `
 
 export const Bar = styled('div')<{barHeight: number, state: string}>`
+position: relative;
 height: ${props => {
     switch(props.state) {
         case 'entering':
@@ -56,6 +58,10 @@ background-size: 600% 600%;
 -moz-animation: ${redBarAnimation} 7s ease infinite;
 animation: ${redBarAnimation} 7s ease infinite;
 transition: height 2s ease-in-out;
+
+&:hover {
+    opacity: .5;
+}
 `
 
 export const Label = styled('div')`
