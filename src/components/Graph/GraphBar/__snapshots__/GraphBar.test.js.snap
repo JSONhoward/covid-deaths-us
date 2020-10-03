@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GraphBar Tests Snapshot Test 1`] = `
+<div
+  className="sc-bdnylx ktDbDz"
+>
+  <div
+    className="sc-dlnjPT jCUDoH"
+  >
+    All Ages
+  </div>
+  <div
+    aria-describedby={null}
+    className="sc-gtssRu hNqDcK"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchStart={[Function]}
+    title={null}
+  />
+  <p
+    className="sc-hKFyIo jTqqGX"
+  >
+    0
+  </p>
+</div>
+`;

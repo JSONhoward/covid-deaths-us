@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GraphOptions Tests Snapshot Test 1`] = `
+<div
+  className="sc-bdnylx cbPWbg"
+>
+  <div
+    className="sc-dlnjPT eKCQUI"
+  >
+    <p>
+      Show Data by:
+    </p>
+    <button
+      className="sc-gtssRu iUOZyM"
+      data-testid="stateButton"
+      id="state"
+    >
+      State
+    </button>
+    <button
+      className="sc-gtssRu iUOZyM"
+      data-testid="ageButton"
+      id="age"
+    >
+      Age
+    </button>
+  </div>
+  <div
+    className="sc-hKFyIo gfoLLn"
+    data-testid="updatedDate"
+  >
+    statistics updated as of 
+  </div>
+</div>
+`;

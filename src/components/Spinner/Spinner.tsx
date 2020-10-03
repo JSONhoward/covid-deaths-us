@@ -6,7 +6,7 @@ import { SpinnerContainer } from './Spinner.styled';
 const Spinner = () => {
     return (
         <SpinnerContainer>
-            <img src={CovidSpinner} alt={'Covid-19 Virus'} />
+            <img data-testid='loadingSpinnerImage' src={CovidSpinner} alt={'Covid-19 Virus'} />
         </SpinnerContainer>
     )
 }

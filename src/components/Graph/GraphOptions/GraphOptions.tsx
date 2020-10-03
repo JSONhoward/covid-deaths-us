@@ -13,10 +13,10 @@ const GraphOptions: React.FC<Props> = ({ handleOptions, options, dateUpdated }) 
         <GraphOptionsContainer>
             <Options>
                 <p>Show Data by:</p>
-                <Button active={options === 'state'} onClick={handleOptions} id={'state'}>State</Button>
-                <Button active={options === 'age'} onClick={handleOptions} id={'age'}>Age</Button>
+                <Button data-testid='stateButton' active={options === 'state'} onClick={handleOptions} id={'state'}>State</Button>
+                <Button data-testid='ageButton' active={options === 'age'} onClick={handleOptions} id={'age'}>Age</Button>
             </Options>
-            <StatDate>statistics updated as of {dateUpdated}</StatDate>
+            <StatDate data-testid='updatedDate'>statistics updated as of {dateUpdated}</StatDate>
         </GraphOptionsContainer>
     )
 }

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spinner Tests Snapshot Test 1`] = `
+<div
+  className="sc-bdnylx bZWmCJ"
+>
+  <img
+    alt="Covid-19 Virus"
+    data-testid="loadingSpinnerImage"
+    src="covid-image.png"
+  />
+</div>
+`;
